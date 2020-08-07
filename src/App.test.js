@@ -2,8 +2,14 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('Test if BARETTO is in the DOM', () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const headerTextDark = getByText("BARETTO");
+  expect(headerTextDark).toBeInTheDocument();
+});
+
+test('Test if CREATIVE is in the DOM', () => {
+  const { getByText } = render(<App />);
+  const headerTextLight = getByText("CREATIVE");
+  expect(headerTextLight).toBeInTheDocument();
 });
